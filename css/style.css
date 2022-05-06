@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&family=Shadows+Into+Light&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+   width: 100%;
+   height: 90px;
+   background-color: #357DED;
+   line-height: 75px;
+   padding: 0px 100px; 
+   position: fixed;
+   z-index: 1;
+}
+nav .logo{
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+nav .logo p{
+    float: left;
+    color: #fff;
+    text-transform: uppercase;
+}
+nav ul{
+    float: right;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 0px 32px;
+}
+nav ul li a:hover{
+    color: #FAA916; /*When the cursor is on the heading of the page it will turn orange*/
+}
+nav ul li .active{
+    color: #FAA916; /*The active page will be highlighted orange*/
+}
+.image img{
+    width: 100%;
+    height: 0px auto;
+    opacity: 1; /* To make my background image trasparent*/
+}
+body{
+    font-family: 'Poppins', sans-serif; 
+    background-color: #F4D1AE; /* Background colour set*/
+    line-height: 1.6; /* Sets the height of a line box */
+    text-align: center; /* Text is in the middle of the page */
+}
+.container{
+    max-width: 960px;
+    margin: auto; /* Set to auto so it's pushed to the middle */
+    padding: 0 30px;
+}
+#showcase { 
+    height: 300px;
+}
+#showcase h1 {
+    font-size: 50px;
+    line-height: 1.3;
+    position: relative;
+    animation: heading;
+    animation-duration: 3s; /*Transition lasts 3 seconds*/
+    animation-fill-mode: forwards; /*Forwards means the transistion will come down and stay in it's place*/ 
+}
+@keyframes heading{
+    0% {top: -17px;} /*Transition starting just from under the banner photo*/
+    100% {top: 200px;} /*Transistion just coming to the top of the text*/
+}
+#content {
+    position: relative;
+    animation-name: content;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes content {
+    0% {left: -1000px;} /*Transistion of the text is coming in from the left of screen*/
+    100% {left: 0;}
+}
+.btn{
+    display: inline-block; /*Want it to go on next line like a block but not all way across*/
+    color: #357DED;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border: black 1px solid;
+    margin-top: 40px;
+    opacity: 0;
+    animation-name: btn;
+    animation-duration: 3s; /*Animation will last 3 seconds*/
+    animation-delay: 3s; /*Delayed 3 seconds after first two transitions*/
+    animation-fill-mode: forwards; /*Forwards that is stays in place after*/
+
+    transition-property: transform; /*Specifies the name or names of the CSS properties to which transitions should be applied.*/
+    transition-duration: 1s; /*Transition lasts 1 second*/
+}
+.btn:hover {
+    transform: rotateY(180deg); /*Once the cursor moves onto the button, it will rotate 180degrees*/
+}
+@keyframes btn {
+    0% {opacity: 0;} /*Starting the animation as invisable*/
+    100% {opacity: 1;} /*Ending the animation which will be seen*/
+}
+.social-menu:hover {
+    color: #357DED; /*When the cursor hoovers over the social media icons they chnage colour to blue*/
+}
+
+
+
+
+
